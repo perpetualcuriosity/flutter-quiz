@@ -18,7 +18,7 @@ class _Scaff extends State<Scaff> {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-              
+                Image.asset('lib/assets/quiz-logo.png',height: 300,width: 300)
             ],
           ),
         ),
