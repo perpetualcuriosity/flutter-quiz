@@ -12,7 +12,7 @@ class _Scaff extends State<Scaff> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(gradient: LinearGradient(colors: col)),
+        decoration: BoxDecoration(gradient: LinearGradient(colors: col,begin: Alignment.topLeft,end: Alignment.bottomRight)),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -24,7 +24,7 @@ class _Scaff extends State<Scaff> {
               SizedBox(height: 30),
               IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.arrow_right, color: Colors.white),
+                  icon: Icon(Icons.arrow_right, color: Colors.white,size: 50),
                   tooltip: 'Start Quiz')
             ],
           ),
