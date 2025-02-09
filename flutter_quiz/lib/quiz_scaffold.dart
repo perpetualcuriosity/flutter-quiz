@@ -13,6 +13,15 @@ class _Scaff extends State<Scaff> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(gradient: LinearGradient(colors: col)),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              
+            ],
+          ),
+        ),
       ),
     );
   }
