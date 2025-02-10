@@ -8,10 +8,7 @@ class Scaff extends StatefulWidget {
 }
 
 class _Scaff extends State<Scaff> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+  Widget wid = Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
                 colors: col,
@@ -29,7 +26,9 @@ class _Scaff extends State<Scaff> {
                       color: Colors.white, fontWeight: FontWeight.bold)),
               SizedBox(height: 30),
               OutlinedButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  
+                },
                 icon: Icon(Icons.arrow_right_alt, color: Colors.white),
                 label: Text(
                   'Start Quiz',
@@ -40,7 +39,11 @@ class _Scaff extends State<Scaff> {
             ],
           ),
         ),
-      ),
+      );
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: wid 
     );
   }
 }
