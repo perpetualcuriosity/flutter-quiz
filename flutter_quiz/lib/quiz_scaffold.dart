@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quiz/global_theme.dart';
+import 'package:flutter_quiz/quiz.dart';
 
 class Scaff extends StatefulWidget {
   const Scaff({super.key});
@@ -8,7 +9,11 @@ class Scaff extends StatefulWidget {
 }
 
 class _Scaff extends State<Scaff> {
-  Widget wid = Container(
+  Widget wid = Container();
+  @override
+  void initState() {
+    super.initState();
+    wid = Container(
     decoration: BoxDecoration(
         gradient: LinearGradient(
             colors: col, begin: Alignment.topLeft, end: Alignment.bottomRight)),
@@ -24,7 +29,11 @@ class _Scaff extends State<Scaff> {
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
           SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              setState(() {
+                wid = Quiz();
+              });
+            },
             icon: Icon(Icons.arrow_right_alt, color: Colors.white),
             label: Text(
               'Start Quiz',
@@ -35,7 +44,8 @@ class _Scaff extends State<Scaff> {
         ],
       ),
     ),
-  );
+  ); // Set the initial UI
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: wid);
